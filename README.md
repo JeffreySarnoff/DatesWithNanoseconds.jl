@@ -1,2 +1,2 @@
 # DatesWithNanoseconds.jl
-`TimeDate` is nanosecond resolved, and `DateTime` compatible.
+`TimeDate` is nanosecond resolved, `Dates.jl` compatible.
