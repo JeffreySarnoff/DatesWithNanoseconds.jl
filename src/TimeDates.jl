@@ -5,8 +5,9 @@ export TimeDate, periods, timedate2rata, rata2timedate
 using Dates
 using Dates: AbstractDateTime, CompoundPeriod, value, days, tons, toms
 
-include("constants.jl")
+
 include("timedate.jl")
+include("constants.jl")
 include("basefuncs.jl")
 include("accessors.jl")
 include("compare.jl")
