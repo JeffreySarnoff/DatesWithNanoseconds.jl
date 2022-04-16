@@ -34,12 +34,12 @@ tomillis(x::Microsecond) = div(x, 1_000)
 tomillis(x::Year) = daysinyear(year(x))
 
 for T in (:Year, :Month)
-    tomillis(x::$T) = Dates.days(x) * MillisecondsPerDay
+    @eval tomillis(x::$T) = Dates.days(x) * MillisecondsPerDay
 end
 
 for T in DateTimeParts[3:end-1]
-    tomillis(x::$T) = Dates.toms(x)
+    @eval tomillis(x::$T) = Dates.toms(x)
 end
 for T in (:Microseconds, :Nanoseconds)
-    tomillis(x::$T) = Dates.tons(x)
+    @eval tomillis(x::$T) = Dates.tons(x)
 end
